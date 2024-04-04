@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: ${{ matrix.tools }}
-        uses: microsoft/action-python@0.7.1
+        uses: microsoft/action-python@0.7.2
         with:
           ${{ matrix.tools }}: true
           args: ${{ matrix.args }}
