@@ -19,10 +19,6 @@ jobs:
             args: ""
     steps:
       - uses: actions/checkout@v4
-      - uses: Azure/login@v1.4.7
-        continue-on-error: true
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: ${{ matrix.tools }}
         uses: microsoft/action-python@0.7.1
         with:
