@@ -87,18 +87,9 @@ ignore = ["E722", "B001", "W503", "E203"]
 python_version = '3.11'
 
 [tool.pytest.ini_options]
-addopts = "--cov-report xml:coverage.xml --cov src --cov-fail-under 0 --cov-append -m 'not integration'"
+addopts = "--cov-report xml:coverage.xml --cov src --cov-fail-under 0 --cov-append"
 pythonpath = ["src"]
 testpaths = "tests"
-junit_family = "xunit2"
-markers = [
-    "integration: marks as integration test",
-    "notebooks: marks as notebook test",
-    "gpu: marks as gpu test",
-    "spark: marks tests which need Spark",
-    "slow: marks tests as slow",
-    "unit: fast offline tests",
-]
 
 [tool.pylint]
 extension-pkg-whitelist = [
