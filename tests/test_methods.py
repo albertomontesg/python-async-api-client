@@ -4,6 +4,8 @@
 #   ---------------------------------------------------------------------------------
 """This is a sample python file for testing functions from the source code."""
 
+from __future__ import annotations
+
 from meteoswiss_async.hello_world import hello_world
 
 
@@ -18,7 +20,7 @@ def hello_test():
 def test_hello(unit_test_mocks: None):
     """
     This is a simple test, which can use a mock to override online functionality.
-    unit_test_mocks: Fixture located in conftest.py, implictly imported via pytest.
+    unit_test_mocks: Fixture located in conftest.py, implicitly imported via pytest.
     """
     hello_test()
 
