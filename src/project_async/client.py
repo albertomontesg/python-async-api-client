@@ -3,9 +3,11 @@
 from __future__ import annotations
 
 import functools
-from typing import Any, Self
+from typing import Self
 
 import aiohttp
+
+from . import model
 
 __all__ = [
     "Client",
@@ -40,5 +42,6 @@ class Client:
         return wrapper
 
     @authenticated
-    async def get_foo(self, *args, **kwargs) -> Any:
+    async def get_foo(self, *args, **kwargs) -> model.Response:
         """Method to implement."""
+        return model.Response.from_dict({"id": 1, "fooBar": "foobar"})
