@@ -15,6 +15,7 @@ class Model(DataClassJsonMixin, abc.ABC):
     def __init_subclass__(cls):
         cls = dataclasses.dataclass(frozen=True, kw_only=True)(cls)
         cls = dataclass_json(cls)
+        return cls
 
 
 class Response(Model):
