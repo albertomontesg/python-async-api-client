@@ -24,5 +24,8 @@
     ],
     "isort.args": [
         "--settings-path=pyproject.toml"
+    ],
+    "cSpell.words": [
+        "aiohttp"
     ]
 }

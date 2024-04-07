@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 
 [project]
-name = "project-name"
+name = "project-async"
 authors = [{ name = "Alberto Montes", email = "al.montes.gomez@gmail.com" }]
 description = "Sample Python Project for creating a new Python Async Client for a new API"
 readme = "README.md"
@@ -21,8 +21,8 @@ classifiers = [
 ]
 license = { file = "LICENSE" }
 requires-python = ">=3.11"
-version = "0.0.1"
 dependencies = ["aiohttp==3.9.3", "dataclasses-json==0.6.4"]
+dynamic = ['version']
 
 [project.optional-dependencies]
 dev = [
@@ -47,15 +47,18 @@ dev = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/albertomontesg/meteoswiss-async/blob/main/README.md"
-Source = "https://github.com/albertomontesg/meteoswiss-async"
-Tracker = "https://github.com/albertomontesg/meteoswiss-async/issues"
+Documentation = "https://github.com/albertomontesg/python-async-api-client/blob/main/README.md"
+Source = "https://github.com/albertomontesg/python-async-api-client"
+Tracker = "https://github.com/albertomontesg/python-async-api-client/issues"
 
 [tool.bandit]
 exclude_dirs = ["build", "dist", "tests", "scripts"]
 number = 4
 recursive = true
 targets = "src"
+
+[tool.setuptools.dynamic]
+version = { attr = "project_async.__version__" }
 
 [tool.black]
 line-length = 80

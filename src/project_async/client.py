@@ -15,6 +15,10 @@ __all__ = [
 
 
 class Client:
+    """Async client for your API.
+
+    TODO: describe what the client does.
+    """
 
     def __init__(
         self, *, session: aiohttp.ClientSession, username: str, password: str
