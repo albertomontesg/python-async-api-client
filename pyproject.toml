@@ -21,7 +21,7 @@ classifiers = [
 ]
 license = { file = "LICENSE" }
 requires-python = ">=3.11"
-dependencies = ["aiohttp==3.9.5", "dataclasses-json==0.6.5"]
+dependencies = ["aiohttp==3.9.5", "dataclasses-json==0.6.6"]
 dynamic = ['version']
 
 [project.optional-dependencies]
@@ -35,7 +35,7 @@ dev = [
     "flake8",
     "flake8-pyproject",
     "isort==5.13.2",
-    "pre-commit==3.7.0",
+    "pre-commit==3.7.1",
     "pylint==3.1.0",
     "pytest-cov==5.0.0",
     "pytest-mock<3.14.1",
