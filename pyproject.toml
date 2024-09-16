@@ -40,7 +40,7 @@ dev = [
     "pytest-cov==5.0.0",
     "pytest-mock<3.14.1",
     "pytest-runner",
-    "pytest==8.3.2",
+    "pytest==8.3.3",
     "pytest-github-actions-annotate-failures",
     "pytype",
     "shellcheck-py==0.10.0.1",
